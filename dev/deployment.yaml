@@ -6,7 +6,8 @@ spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 6
+  replicas: 1
+  revisionHistoryLimit: 3
   template:
     metadata:
       labels:
@@ -16,4 +17,5 @@ spec:
       - name: myapp
         image: nginxdemos/hello:0.1
         ports:
-        - containerPort: 8080
+        - containerPort: 9090
+
